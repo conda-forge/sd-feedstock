@@ -2,7 +2,7 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
-if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+if [[ $build_platform == $target_platform ]]; then
   ### Assert licenses are available
   # Install cargo-license
   export CARGO_HOME="$BUILD_PREFIX/cargo"
