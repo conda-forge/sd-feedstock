@@ -34,7 +34,7 @@ about:
   summary: Intuitive find & replace CLI (sed alternative)
   license_file:
     - LICENSE
-    - - THIRDPARTY.yml
+    - THIRDPARTY.yml
 
 extra:
   recipe-maintainers:
