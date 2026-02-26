@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/chmln/sd/archive/v{{ version }}.tar.gz
-  sha256: 2adc1dec0d2c63cbffa94204b212926f2735a59753494fca72c3cfe4001d472f
+  sha256: defdce484f8c92f265e1282490572575028967c2c55d356111d1e49a3ea9a88e
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
   build:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}   # [unix]
+    - {{ stdlib("c") }}     # [unix]
     - {{ native }}binutils  # [win]
     - cargo-bundle-licenses
 
